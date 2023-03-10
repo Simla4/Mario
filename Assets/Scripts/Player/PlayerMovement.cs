@@ -11,8 +11,10 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private float speed;
     [SerializeField] private float jumpSpeed = 3;
+    
     private float horizontalSpeed;
-
+    public bool isJumping = false;
+    
     #endregion
 
     #region Callbacks
@@ -20,11 +22,13 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         EventManager.OnPlayerJump += JumpPlayer;
+        EventManager.OnPlayerInGround += ChangeJumpState;
     }
 
     private void OnDisable()
     {
         EventManager.OnPlayerJump -= JumpPlayer;
+        EventManager.OnPlayerInGround -= ChangeJumpState;
     }
 
     private void Update()
@@ -50,7 +54,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void JumpPlayer()
     {
-        transform.Translate(Vector3.up * jumpSpeed);
+        if (!isJumping)
+        {
+            isJumping = true;
+            
+            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
+        }
+    }
+
+    private void ChangeJumpState()
+    {
+        isJumping = false;
     }
 
     #endregion
