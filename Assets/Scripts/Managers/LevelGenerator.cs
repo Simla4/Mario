@@ -13,7 +13,8 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private int levelHeight;
 
     [SerializeField] private Tilemap tilemap;
-    [SerializeField] private Tile tile;
+    [SerializeField] private Tile groundTile;
+    [SerializeField] private Tile grassTile;
 
     private int[,] levelMap;
 
@@ -44,7 +45,11 @@ public class LevelGenerator : MonoBehaviour
             for (int j = 0; j < levelHeight; j++)
             {
 
-                if (j < height)
+                if (j == height - 1)
+                {
+                    levelMap[i, j] = 2;
+                }
+                else if (j < height)
                 {
                     levelMap[i, j] = 1;
                 }
@@ -67,6 +72,11 @@ public class LevelGenerator : MonoBehaviour
                 if (levelMap[x, y] == 1)
                 {
                     tilemap.SetTile(new Vector3Int(x, y, 0), tile);
+                }
+                else if (levelMap[x, y] == 2)
+                {
+                    tilemap.SetTile(new Vector3Int(x, y, 0), secondtile);
+
                 }
                 
             }
