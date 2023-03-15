@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
-public class LevelManager : MonoBehaviour
+public class LevelGenerator : MonoBehaviour
 {
     #region Variables
 

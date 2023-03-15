@@ -353,30 +353,32 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: -8.021392e-29
+      e00: 1e-45
       e01: 0
       e02: 2.8750038
       e03: 2.8750038
-      e10: 6.49e-43
+      e10: 0
       e11: 0
-      e12: 6.49e-43
-      e13: 6.49e-43
+      e12: 7.82e-43
+      e13: 7.82e-43
       e20: 3.7918183e+26
-      e21: 1e-45
-      e22: -6.033346e-29
-      e23: 1.4728329e+14
+      e21: 6e-45
+      e22: -2.119304e-19
+      e23: -4.7015636e-10
       e30: 4.5904e-41
       e31: 0
-      e32: 6.49e-43
-      e33: 6.5e-43
+      e32: 7.82e-43
+      e33: 7.85e-43
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: 3.5316e-41, g: 3.5316e-41, b: 3.5316e-41, a: 3.5316e-41}
+    m_Data: {r: 3.5486e-41, g: 3.5486e-41, b: 3.5486e-41, a: 3.5486e-41}
+  - m_RefCount: 0
+    m_Data: {r: 3.5486e-41, g: 3.5486e-41, b: 3.5486e-41, a: 3.5486e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -5, y: -6, z: 0}
-  m_Size: {x: 11, y: 8, z: 1}
+  m_Size: {x: 15, y: 12, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -639,18 +641,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0055668354, y: -0.030733347}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.95, y: 1.45}
+    oldSize: {x: 0.57575756, y: 0.8787879}
     newSize: {x: 0.95, y: 1.45}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.95, y: 1.45}
+  m_Size: {x: 0.52257395, y: 0.87638044}
   m_EdgeRadius: 0
 --- !u!114 &1830818126
 MonoBehaviour:
