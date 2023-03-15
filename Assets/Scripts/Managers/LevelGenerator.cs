@@ -12,7 +12,6 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private int levelWidth;
     [SerializeField] private int levelHeight;
 
-    [SerializeField] private Sprite ground;
     [SerializeField] private Tilemap tilemap;
     [SerializeField] private Tile tile;
 
@@ -44,6 +43,7 @@ public class LevelGenerator : MonoBehaviour
             
             for (int j = 0; j < levelHeight; j++)
             {
+
                 if (j < height)
                 {
                     levelMap[i, j] = 1;
