@@ -547,11 +547,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d524d0667fb20f94e854e776f0e3d5dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelWidth: 30
-  levelHeight: 5
-  tilemap: {fileID: 714281183}
-  tile: {fileID: 11400000, guid: 9df20f2c42d39994ab53806112c01241, type: 2}
-  secondtile: {fileID: 11400000, guid: d22e6bdb625c54246b85e6dcae3d2ae1, type: 2}
+  levelWidth: 0
+  levelHeight: 0
+  tilemap: {fileID: 0}
+  groundTile: {fileID: 11400000, guid: 9df20f2c42d39994ab53806112c01241, type: 2}
+  grassTile: {fileID: 11400000, guid: d22e6bdb625c54246b85e6dcae3d2ae1, type: 2}
 --- !u!1 &1830818119
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +695,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.45454547, y: 0.72727275}
+    oldSize: {x: 0.57575756, y: 0.8787879}
     newSize: {x: 0.95, y: 1.45}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

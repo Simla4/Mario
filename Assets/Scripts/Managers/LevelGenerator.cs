@@ -71,11 +71,11 @@ public class LevelGenerator : MonoBehaviour
             {
                 if (levelMap[x, y] == 1)
                 {
-                    tilemap.SetTile(new Vector3Int(x, y, 0), tile);
+                    tilemap.SetTile(new Vector3Int(x, y, 0), groundTile);
                 }
                 else if (levelMap[x, y] == 2)
                 {
-                    tilemap.SetTile(new Vector3Int(x, y, 0), secondtile);
+                    tilemap.SetTile(new Vector3Int(x, y, 0), grassTile);
 
                 }
                 
