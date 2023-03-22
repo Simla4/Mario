@@ -11,7 +11,7 @@ public class LevelGenerator : MonoBehaviour
 
     [SerializeField] private int levelWidth;
     [SerializeField] private int levelHeight;
-    [SerializeField] private int tileDifference = 1;
+    [SerializeField] private int minTileHeight = 1;
 
     [SerializeField] private Tilemap tilemap;
     [SerializeField] private Tile groundTile;
@@ -37,7 +37,7 @@ public class LevelGenerator : MonoBehaviour
     {
         levelMap = new int[levelWidth, levelHeight];
         
-        var minHeightVal = levelHeight - tileDifference;
+        var minHeightVal = levelHeight - minTileHeight;
 
         for (int i = 0; i < levelWidth; i++)
         {
