@@ -44,23 +44,23 @@ public class EnemyMovement : MonoBehaviour
         
         var hit = Physics2D.Raycast(new Vector2(origin, transform.position.y), Vector2.right, distance  * 2);
 
-        var isSee = false;
+        var isEnemySee = false;
 
         if (hit.collider != null)
         {
             if (hit.collider.CompareTag("Player"))
             {
-                isSee = true;
+                isEnemySee = true;
 
                 player = hit.collider.gameObject;
             }
         }
         else
         {
-            isSee = false;
+            isEnemySee = false;
         }
 
-        return isSee;
+        return isEnemySee;
     }
 
     private void ChasePlayer()
