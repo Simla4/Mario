@@ -9,7 +9,7 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField] private float distance;
     [SerializeField] private float speed;
-
+    [SerializeField] private LayerMask layerMask;
     private Vector2 firstPos;
     private GameObject player;
 
@@ -42,7 +42,7 @@ public class EnemyMovement : MonoBehaviour
     {
         var origin = transform.position.x - distance;
         
-        var hit = Physics2D.Raycast(new Vector2(origin, transform.position.y), Vector2.right, distance  * 2);
+        var hit = Physics2D.Raycast(new Vector2(origin, transform.position.y), Vector2.right, distance  * 2, layerMask);
 
         var isEnemySee = false;
 
