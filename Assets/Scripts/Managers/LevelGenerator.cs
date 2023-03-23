@@ -9,9 +9,7 @@ public class LevelGenerator : MonoBehaviour
 {
     #region Variables
 
-    [SerializeField] private int levelWidth;
-    [SerializeField] private int levelHeight;
-    [SerializeField] private int minTileHeight = 1;
+    [SerializeField] private LevelData levelData;
 
     [SerializeField] private Tilemap tilemap;
     [SerializeField] private Tile groundTile;
@@ -35,9 +33,13 @@ public class LevelGenerator : MonoBehaviour
 
     private void GenerateArrayList()
     {
+        var levelWidth = levelData.levelWidth;
+        var levelHeight = levelData.levelHeight;
+        var tileDistance = levelData.tileDistance;
+        
         levelMap = new int[levelWidth, levelHeight];
         
-        var minHeightVal = levelHeight - minTileHeight;
+        var minHeightVal = levelHeight - tileDistance;
 
         for (int i = 0; i < levelWidth; i++)
         {
@@ -66,9 +68,9 @@ public class LevelGenerator : MonoBehaviour
     {
         tilemap.ClearAllTiles();
         
-        for (int x = 0; x < levelWidth; x++)
+        for (int x = 0; x < levelData.levelWidth; x++)
         {
-            for (int y = 0; y < levelHeight; y++)
+            for (int y = 0; y < levelData.levelHeight; y++)
             {
                 if (levelMap[x, y] == 1)
                 {

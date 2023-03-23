@@ -7,8 +7,7 @@ public class EnemyMovement : MonoBehaviour
 {
     #region Variables
 
-    [SerializeField] private float distance;
-    [SerializeField] private float speed;
+    [SerializeField] private EnemyData enemyData;
     [SerializeField] private LayerMask layerMask;
     private Vector2 firstPos;
     private GameObject player;
@@ -40,9 +39,10 @@ public class EnemyMovement : MonoBehaviour
 
     private bool CanSeePlayer()
     {
-        var origin = transform.position.x - distance;
+        var argoRange = enemyData.argoRange;
+        var origin = transform.position.x - argoRange;
         
-        var hit = Physics2D.Raycast(new Vector2(origin, transform.position.y), Vector2.right, distance  * 2, layerMask);
+        var hit = Physics2D.Raycast(new Vector2(origin, transform.position.y), Vector2.right, argoRange  * 2, layerMask);
 
         var isEnemySee = false;
 
@@ -67,7 +67,7 @@ public class EnemyMovement : MonoBehaviour
     {
         var currentPos = transform.position;
 
-        currentPos.x = Mathf.MoveTowards(currentPos.x, player.transform.position.x, Time.deltaTime * speed);
+        currentPos.x = Mathf.MoveTowards(currentPos.x, player.transform.position.x, Time.deltaTime * enemyData.speed);
         transform.position = new Vector3(currentPos.x, currentPos.y, 0);
     }
 
@@ -75,7 +75,7 @@ public class EnemyMovement : MonoBehaviour
     {
         var currentPos = transform.position;
         
-        currentPos.x = Mathf.MoveTowards(currentPos.x, firstPos.x, Time.deltaTime * speed);
+        currentPos.x = Mathf.MoveTowards(currentPos.x, firstPos.x, Time.deltaTime * enemyData.speed);
         transform.position = new Vector3(currentPos.x, currentPos.y, 0);
     }
 

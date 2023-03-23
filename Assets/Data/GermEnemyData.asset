@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b669b2387dcbce4db378b5c8d2fee67, type: 3}
   m_Name: GermEnemyData
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  argoRange: 0
-  speed: 0
+  enemySprite: {fileID: -610141139, guid: 48d824ed7950c8641a7a03d7c6ad755e, type: 3}
+  enemyDeadSprite: {fileID: -46908317, guid: 48d824ed7950c8641a7a03d7c6ad755e, type: 3}
+  argoRange: 1.5
+  speed: 1.5
